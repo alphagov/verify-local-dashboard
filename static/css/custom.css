@@ -1,0 +1,158 @@
+#number-advice-nd {
+    font-size: 20px;
+    max-height: 20px;
+                max-width: 50px;
+}
+
+#total-client-nd {
+    font-size: 20px;
+    max-height: 20px;
+        max-width: 50px;
+}
+
+.number-display
+{align-self: center;
+margin: 5px 5px
+}
+
+#gender-row-chart {
+    height: 500px;
+    width: 475px;
+    max-height: 90%;
+    max-width: 98%;
+    margin:0px 5px 20px 5px;
+    preserveAspectRatio="none";
+}
+
+.dc-chart g.tick text {
+        fill: black;
+    font-size: 12px;}
+    
+/*.dc-chart g.row text {
+    fill: black;
+    font-size: 12px;
+}*/
+
+.dc-chart {
+    height: 230px;
+    width: 490px;
+        max-height: 98%;
+    max-width: 98%;
+    preserveAspectRatio="none";
+          padding-left: 0px;
+  padding-right: 0px;
+    margin:0px 5px 10px 5px;
+}
+
+body.application {
+  background: #ffffff;
+  padding: 0px 0px 0;
+}
+body.application > .container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+body.application > .container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+body.application div[class^="col-"] {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+body.application div[class^="col-"] div[class^="col-"] {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+body.application hr {
+  border-color: #d7d7d7;
+  margin: 0px 0;
+}
+
+.navbar-inverse {
+  background-color: #3d4a57;
+  border-color: #333;
+}
+.navbar-inverse .navbar-nav > li > a,
+.navbar a.navbar-brand {
+  color: #fbfbfb;
+  text-decoration: none;
+}
+
+.reset{
+    text-align:right;
+    font-size: 14px;
+    padding: 5px 10px 5px;
+}
+
+.titling {
+    text-align:left;
+    border-bottom: 10px solid #d7d7d7;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 5px 5px 5px 5px;
+}
+
+.chart-wrapper {
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+.chart-wrapper .chart-title {
+  border-bottom: 1px solid #d7d7d7;
+  color: black;
+  font-size: 14px;
+  font-weight: 200;
+  padding: 5px 10px 5px ;
+}
+
+.chart-wrapper .chart-stage {
+  min-height: 255px;
+overflow: hidden;
+  padding: 3px 3px 3px;
+    margin: 0 auto 0;
+  position: relative;
+    text-align:center;
+    vertical-align:middle;
+}
+
+.chart-wrapper .chart-notes {
+  background: #fbfbfb;
+  border-top: 1px solid #e2e2e2;
+  color: #808080;
+  font-size: 12px;
+  padding: 1px 1px 1px;
+}
+
+/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+                url('https://advice-agencies.herokuapp.com/static/img/ajax-loader.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+#dashboard.loading {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+#dashboard.loading .modal {
+    display: block;
+}

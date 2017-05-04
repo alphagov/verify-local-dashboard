@@ -1,0 +1,31 @@
+date,variable,value
+2017-02-05,Use legacy route,110
+2017-02-12,Use legacy route,130
+2017-02-19,Use legacy route,160
+2017-02-26,Use legacy route,200
+2017-03-05,Use legacy route,250
+2017-03-12,Use legacy route,310
+2017-03-19,Use legacy route,380
+2017-03-26,Use legacy route,460
+2017-04-02,Use legacy route,550
+2017-04-09,Use legacy route,550
+2017-02-05,Use GOV.UK Verify,165
+2017-02-12,Use GOV.UK Verify,195
+2017-02-19,Use GOV.UK Verify,240
+2017-02-26,Use GOV.UK Verify,300
+2017-03-05,Use GOV.UK Verify,375
+2017-03-12,Use GOV.UK Verify,465
+2017-03-19,Use GOV.UK Verify,70
+2017-03-26,Use GOV.UK Verify,690
+2017-04-02,Use GOV.UK Verify,825
+2017-04-09,Use GOV.UK Verify,825
+2017-02-05,Abandon application,220
+2017-02-12,Abandon application,260
+2017-02-19,Abandon application,320
+2017-02-26,Abandon application,400
+2017-03-05,Abandon application,500
+2017-03-12,Abandon application,620
+2017-03-19,Abandon application,60
+2017-03-26,Abandon application,920
+2017-04-02,Abandon application,1100
+2017-04-09,Abandon application,1100

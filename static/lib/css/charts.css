@@ -1,0 +1,27 @@
+div.web-metrics{
+	text-align: justify;
+	font-weight: bold;
+	font-size: 2em;
+	/*display: inline-flex; */
+	/*justify-content: flex-start; */
+	overflow: all;
+}
+.single-metric{
+	padding: 10px
+}
+#visits{
+    float: left;
+    width: 25%;
+}
+#unique-visitors{
+    float: left;
+    width: 25%;
+}
+#pageviews{
+    float: left;
+    width: 25%;
+}
+#average-time-on-page{
+    float: left;
+    width: 25%;
+}

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 9]><html class="lte-ie8" lang="en"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+        <!--    Load CSS elements-->
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='lib/css/spotlight.css') }}">
+    <!-- <link rel=stylesheet type=text/css href="{{ url_for('static', filename='lib/css/fonts.css') }}"> -->
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='lib/css/govuk-template.css') }}">
+    <!-- <link rel=stylesheet type=text/css href="{{ url_for('static', filename='lib/css/bootstrap.min.css') }}"> -->
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='lib/css/dc.css') }}">
+    <!-- <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/custom.css') }}"> -->
+    <!-- <link rel=stylesheet type=text/css href="{{ url_for('static', filename='lib/css/govuk-template-print.css') }}"> -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon" />
+    
+    <title>GOV.UK Verify Local Dashboard</title>
+    
+ <!--Load Javascript files-->
+    <script type="text/javascript">
+    /*global navigator*/
+        (function () {
+            if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+                var d = document,
+                    c = "appendChild",
+                    a = d.createElement("style");
+                a[c](d.createTextNode("@-ms-viewport{width:auto!important}"));
+                d.getElementsByTagName("head")[0][c](a);
+            }
+        })();
+    </script>
+    
+    <script src="{{ url_for('static', filename='lib/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/js/govuk-template.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/js/crossfilter.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/js/d3.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/js/dc.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/js/keen.min.js') }}"></script>
+    <!-- <script src="{{ url_for('static', filename='js/graphs.js') }}"></script> -->
+
+    
+
+</head>
+
+
+
+<body>
+<!-- start header -->
+<header role="banner" id="global-header" class="with-proposition">
+    <div class="header-wrapper">
+        <div class="header-global">
+            <div class="header-logo">
+                <a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" id="logo" class="content">
+                        GOV.UK
+                    </a>
+            </div>
+        </div>
+        <div class="header-proposition">
+            <div class="content">
+                <nav id="proposition-menu" role="navigation">
+                    <a href="https://www.gov.uk/performance" id="proposition-name">Performance</a>
+                    <span class="beta-tag">Beta</span>
+                    <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
+                    <ul id="proposition-links">
+                        <li><a href="https://www.gov.uk/performance/services">Service dashboards</a>
+                        </li>
+                        <li><a href="http://performance-platform.readthedocs.org/">Get a dashboard</a>
+                        </li>
+                        <li><a href="https://www.gov.uk/performance/about">About</a>
+                        </li>
+                        <li><a href="https://www.gov.uk/performance/prototypes">Prototypes</a>
+                        </li>
+                        <li><a href="https://gdsdata.blog.gov.uk/">Blog</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </div>
+</header>
+<!--end header-->
+
+<div id="global-header-bar">
+    <div class="inner-block">
+        <div class="header-bar"></div>
+    </div>
+</div>
+<!--end global-header-bar-->
+
+<div id="wrapper">
+    <main id="content" class="group" role="main">
+
+
+
+
+        <body class="application">
+        <header class="page-header">
+    <div>
+        <h2 class="heading-large">Service[service name] Dashboard for LA [LA name]</h2>
+
+    </div>
+</header>
+<p class="lede">
+  Charts showing the performance  data for users of GOV.UK Verify Local Authority 
+</p>
+
+
+            
+           
+            <div class="col-md-5">
+                            <div class="chart-wrapper">
+                                <!-- <div class="chart-stage"> -->
+                                    <div id="test">
+                                        <div class="titling">
+                                            #VerifyLocal [Service] performance dashboard				
+                                            <span class='reset' style='visibility: visible;'>
+                                                Selected: <span class='filter'></span>
+                                            <a class='reset' href='javascript:dc.filterAll();dc.redrawAll();'>Reset all filters</a>
+                                            
+                                            <!-- <a href="javascript:barChartAge.filterAll();dc.redrawAll();">reset</a> -->
+                                        
+                                            </span>
+                                        </div>
+                                    </div>
+                                     <div id="seriestest">
+                                        <div class="titling">
+                                            #Series test				
+                                            <span class='reset' style='visibility: visible;'>
+                                                Selected: <span class='filter'></span>
+                                            <a class='reset' href='javascript:dc.filterAll();dc.redrawAll();'>Reset all filters</a>
+                                            
+                                            <!-- <a href="javascript:barChartAge.filterAll();dc.redrawAll();">reset</a> -->
+                                        
+                                            </span>
+                                        </div>
+                                    </div>
+                                    
+
+                            <!-- </div> -->
+                        </div>  
+</main>
+
+<script type="text/javascript">
+var chart = dc.lineChart("#test");
+d3.csv("static/data/morley.csv", function(error, experiments) {
+  experiments.forEach(function(x) {
+    x.Speed = +x.Speed;
+  });
+  var ndx                 = crossfilter(experiments),
+      runDimension        = ndx.dimension(function(d) {return +d.Run;}),
+      speedSumGroup       = runDimension.group().reduceSum(function(d) {return d.Speed * d.Run / 1000;});
+  chart
+    .width(768)
+    .height(480)
+    .x(d3.scale.linear().domain([0,20]))
+    .interpolate('step-before')
+    .renderArea(true)
+    .brushOn(false)
+    .renderDataPoints(true)
+    .clipPadding(10)
+    .yAxisLabel("This is the Y Axis!")
+    .dimension(runDimension)
+    .group(speedSumGroup);
+  chart.render();
+});
+
+<!-- <script type="text/javascript">
+var chart = dc.seriesChart("#test");
+var ndx, runDimension, runGroup;
+var dateFormat = d3.time.format("%d-%m-%y");
+var numberFormat = d3.format(",d");
+
+d3.csv("static/data/morley.csv", function(error, experiments) {
+// 	experiments.forEach(function (d) {
+// 	d.Expt = dateFormat.parse(d.Expt);
+// 	console.log(d.Expt)
+// });	
+  ndx = crossfilter(experiments);
+  runDimension = ndx.dimension(function(d) {return [+d.Expt, +d.Run]; });
+  runGroup = runDimension.group().reduceSum(function(d) { return +d.Speed; });
+  chart
+    .width(768)
+    .height(480)
+    .chart(function(c) { return dc.lineChart(c).interpolate('basis'); })
+    .x(d3.time.scale().domain([0,20]))
+    .brushOn(false)
+    .yAxisLabel("Measured Speed km/s")
+    .xAxisLabel("Run")
+    .clipPadding(10)
+    .elasticY(true)
+    .dimension(runDimension)
+    .group(runGroup)
+    .mouseZoomable(true)
+    .seriesAccessor(function(d) {return "Expt: " + d.key[0];})
+    .keyAccessor(function(d) {return +d.key[1];})
+    .valueAccessor(function(d) {return +d.value;})
+    .legend(dc.legend().x(350).y(350).itemHeight(13).gap(5).horizontal(1).legendWidth(140).itemWidth(70));
+  chart.yAxis().tickFormat(function(d) {return d3.format(',d')(d+299500);});
+  chart.margins().left += 40;
+  dc.renderAll();
+});
+function load_button(file) {
+    return function load_it() {
+        d3.csv(file, function(error, experiments) {
+            ndx.remove();
+            ndx.add(experiments);
+            dc.redrawAll();
+        });
+    };
+}
+var button1 = load_button("morley.csv"),
+    button2 = load_button("morley2.csv"),
+    button3 = load_button("morley3.csv");
+</script> -->
+
+<!-- <script type="text/javascript">
+  var chart = dc.lineChart('#test');
+  d3.csv('static/data/verifylocalservice.csv', function(error, counts) {
+  // d3.json('static/data/fruits.json', function(error, counts) {
+      if(error)
+          throw new Error(error);
+      var ndx            = crossfilter(counts),
+          fruitDimension = ndx.dimension(function(d) {return d.Date;}),
+          sumGroup       = fruitDimension.group().reduceSum(function(d) {return d.tot_value;});
+      chart
+          .width(768)
+          .height(380)
+          .x(d3.scale.ordinal())
+          .xUnits(dc.units.ordinal)
+          .brushOn(false)
+          .xAxisLabel('Fruit')
+          .yAxisLabel('Quantity Sold')
+          .dimension(fruitDimension)
+          .group(sumGroup);
+      chart.render();
+  });
+</script> -->
+<!-- <script type="text/javascript">
+var serchart = dc.seriesChart("#seriestest");
+var ndx, runDimension, runGroup;
+d3.csv("static/data/verifylocalservice.csv", function(error, experiments) {
+
+var dateFormat = d3.time.format("%s-%m-%y");
+var numberFormat = d3.format(",d");
+
+experiments.forEach(function (d) {
+	d.Date = dateFormat.parse(d.Date);
+});	
+
+  ndx = crossfilter(experiments);
+  // runDimension = ndx.dimension(function(d) {return [+d.Expt, +d.Run]; });
+  runDimension = ndx.dimension(function(d) {return [+d.Date, +d.variable]; });
+  runGroup = runDimension.group().reduceSum(function(d) { return +d.tot_value; });
+
+  serchart
+    .width(768)
+    .height(480)
+    .chart(function(c) { return dc.lineChart(c).interpolate('basis'); })
+    // .x(d3.scale.linear().domain([0,20]))
+    .x(d3.scale.linear().domain([0,20]))
+    // .x(d3.scale.ordinal())
+    // .xUnits(dc.units.ordinal)
+    .brushOn(false)
+    .yAxisLabel("Number of applicaions")
+    .xAxisLabel("Date")
+    .clipPadding(10)
+    .elasticY(true)
+    .dimension(runDimension)
+    .group(runGroup)
+    .mouseZoomable(true)
+    .seriesAccessor(function(d) {return "Channel: " + d.key[0];})
+    .keyAccessor(function(d) {return +d.key[1];})
+    .valueAccessor(function(d) {return +d.value;});
+    // .legend(dc.legend().x(350).y(350).itemHeight(13).gap(5).horizontal(1).legendWidth(140).itemWidth(70));
+  serchart.yAxis().tickFormat(function(d) {return d3.format(',d')(d+299500);});
+  serchart.margins().left += 40;
+  dc.renderAll();
+});
+// function load_button(file) {
+//     return function load_it() {
+//         d3.csv(file, function(error, experiments) {
+//             ndx.remove();
+//             ndx.add(experiments);
+//             dc.redrawAll();
+//         });
+//     };
+// }
+// var button1 = load_button("morley.csv"),
+//     button2 = load_button("morley2.csv"),
+//     button3 = load_button("morley3.csv");
+</script> -->
+</div>
+</body>
+
+
+<!--end footer-->
+<div class="modal"><!-- Place at bottom of page --></div>
+
+</body>
+
+</html>
