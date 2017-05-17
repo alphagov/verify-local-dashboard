@@ -1,4 +1,4 @@
-function makeGraphs(error, data) {
+function makeGraphs(error, data,divid,) {
 // charts
 var time_chart = dc.seriesChart("#ser-chart");
 
