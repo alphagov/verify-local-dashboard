@@ -1,1 +1,0 @@
-web: gunicorn verify_local:app
