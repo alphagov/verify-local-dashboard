@@ -14,13 +14,13 @@ function makeGraphs(error, data) {
 
     // Reusable variable accessors
     var dateAccessor = function(d) {
-        return d3.time.format.iso.parse(d.Date);
+        return d3.time.format.iso.parse(d.date);
     };
     var typeAccessor = function(d) {
         return d.type;  
     };
     var countAccessor = function(d) {
-        return +d['count'];
+        return +d.count;
     };
     // Advanced reduce functions
     var reduceSumInit = function() {
