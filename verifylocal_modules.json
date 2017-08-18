@@ -1,9 +1,9 @@
 {
-	"#VerifyLocal [Service] performance dashboard": ["For post", "For face to face", "For online GOV.UK Verify", "For online legacy route", "For telephone"],
+	"Completed applications per channel": ["Post", "Face to face", "Online GOV.UK Verify", "Online legacy route", "Telephone"],
 	"Number of user enquiries": "Total contact",
-	"Users who use Verify, abandon or use legacy route when starting an online application": ["Use legacy route", "Use GOV.UK Verify", "Abandon application"],
-	"Channel breakdown for transactions":["Number of transactions face to face","Number of transactions online GOV.UK Verify","Number of transactions post","Number of transactions online legacy","Number of transactions phone"],
-	"Reasons for rejected applications": ["Number of incomplete", "Number of illegible", "Number of error of form", "Number of not elegible", "Number of picture does not meet standards", "Number of incorrect payments"],
+	"New applications started with GOV.UK verify, legacy route and 'other ways to apply'": ["Legacy route", "Use GOV.UK Verify", "Other ways to apply"],
+	"Enquiries about the onine application form":["Application process","Eligibility","Application outcome","GOV.UK Verify","Certified companies"],
+	"Reasons for rejected online applications": ["Incomplete", "Illegible", "Error of form", "Not elegible", "Picture does not meet standards", "Incorrect payments"],
 	"Visits": "Visits",
 	"Unique Visitors": "Unique visitors",
 	"Pageviews": "Pageviews",

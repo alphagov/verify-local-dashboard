@@ -1,0 +1,26 @@
+date,variable,value
+2017-02-05,Post,110
+2017-02-12,Post,110
+2017-02-19,Post,110
+2017-02-26,Post,110
+2017-03-05,Post,110
+2017-02-05,Face to face,165
+2017-02-12,Face to face,165
+2017-02-19,Face to face,165
+2017-02-26,Face to face,165
+2017-03-05,Face to face,165
+2017-02-05,Online GOV.UK Verify,220
+2017-02-12,Online GOV.UK Verify,220
+2017-02-19,Online GOV.UK Verify,220
+2017-02-26,Online GOV.UK Verify,220
+2017-03-05,Online GOV.UK Verify,220
+2017-02-05,Online legacy route,330
+2017-02-12,Online legacy route,330
+2017-02-19,Online legacy route,330
+2017-02-26,Online legacy route,330
+2017-03-05,Online legacy route,330
+2017-02-05,Telephone,105
+2017-02-12,Telephone,105
+2017-02-19,Telephone,105
+2017-02-26,Telephone,105
+2017-03-05,Telephone,105

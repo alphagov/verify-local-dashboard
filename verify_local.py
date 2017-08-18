@@ -7,15 +7,17 @@ import pandas as pd
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/buckinghamshire')
 
 def index():
         # return render_template('series_local.html')
         # return render_template('area_local.html')
-        return render_template('local.html')
+        # return render_template('local.html')
+        return render_template('buckinghamshire.html')
         # return render_template('local_all_dims.html')
     
-sheets = requests.get('https://spreadsheets.google.com/feeds/list/1CHmcBuINK-zcd8JAnIvrzswzIGxLEyW3yFSKx_pcV30/2/public/basic?alt=json')
+# sheets = requests.get('https://spreadsheets.google.com/feeds/list/1CHmcBuINK-zcd8JAnIvrzswzIGxLEyW3yFSKx_pcV30/2/public/basic?alt=json')
+sheets = requests.get('https://spreadsheets.google.com/feeds/list/13RVOMzKocVQFW0I00uOHBM6LULGiMb_vfJwzlbyxtMA/1/public/basic?alt=json')
 
 jsondata = json.loads(sheets.text)
 
@@ -59,27 +61,28 @@ for data in jsondata['feed']['entry']:
 
 df = pd.DataFrame.from_dict(dictlist)
 
-replace_columns = {"abandonapplication":"Abandon application",
-       "concessionarytravelonlynumberofpicturedoesnotmeetstandards":"Number of picture does not meet standards",
+
+replace_columns = {"abandonapplication":"Other ways to apply",
+       "numberofpicturedoesnotmeetstandards":"Picture does not meet standards",
        "date":"date",
-       "forfacetoface":"For face to face", 
-       "foronlinegov.ukverify":"For online GOV.UK Verify", 
-       "foronlinelegacyroute":"For online legacy route",
-       "forpost":"For post", 
-       "fortelephone":"For telephone", 
-       "numberoferrorsofform":"Number of error of form", 
-       "numberofillegible":"Number of illegible",
-       "numberofincomplete":"Number of incomplete", 
-       "numberofnoteligible":"Number of not elegible",
-       "numberoftransactionsfacetoface":"Number of transactions face to face",
-       "numberoftransactionsonlinegov.ukverify":"Number of transactions online GOV.UK Verify",
-       "numberoftransactionsonlinelegacy":"Number of transactions online legacy",
-       "numberoftransactionsphone":"Number of transactions phone",
-       "numberoftransactionspost":"Number of transactions post",
-       "parkingpermitsonlynumberofincorrectpayments":"Number of incorrect payments", 
+       "forfacetoface":"Face to face", 
+       "foronlinegov.ukverify":"Online GOV.UK Verify", 
+       "foronlinelegacyroute":"Online legacy route",
+       "forpost":"Post", 
+       "fortelephone":"Telephone", 
+       "numberoferrorsofform":"Error of form", 
+       "numberofillegible":"Illegible",
+       "numberofincomplete":"Incomplete", 
+       "numberofnoteligible":"Elegible",
+       "numberoftransactionsfacetoface":"Application process",
+       "numberoftransactionsonlinegov.ukverify":"Eligibility",
+       "numberoftransactionsonlinelegacy":"GOV.UK Verify",
+       "numberoftransactionsphone":"Certified companies",
+       "numberoftransactionspost":"Application outcome",
+       "numberofincorrectpayments":"Incorrect payments", 
        "totalcontact":"Total contact",
        "usegov.ukverify":"Use GOV.UK Verify", 
-       "uselegacyroute":"Use legacy route",
+       "uselegacyroute":"Legacy route",
        "weeklyvisits":"Visits",
        "weeklyuniquevisits":"Unique visitors",
        "weeklypageviews": "Pageviews",
@@ -88,33 +91,35 @@ replace_columns = {"abandonapplication":"Abandon application",
 
 
 df = df.rename(columns=replace_columns)
+
 df = df[['date',
-		'For post',
-		'For face to face',
-		'For online GOV.UK Verify',
-		'For online legacy route',
-		'For telephone',
+		'Post',
+		'Face to face',
+		'Online GOV.UK Verify',
+		'Online legacy route',
+		'Telephone',
 		'Total contact',
-		'Use legacy route',
+		'Legacy route',
 		'Use GOV.UK Verify',
-		'Abandon application',
-		'Number of transactions face to face',
-		'Number of transactions online GOV.UK Verify',
-		'Number of transactions post',
-		'Number of transactions online legacy',
-		'Number of transactions phone',
-		'Number of incomplete',
-		'Number of illegible',
-		'Number of error of form',
-		'Number of not elegible',
-		'Number of picture does not meet standards',
-		'Number of incorrect payments',
+		'Other ways to apply',
+		'Application process',
+		'Eligibility',
+		'Application outcome',
+		'GOV.UK Verify',
+		'Certified companies',
+		'Incomplete',
+		'Illegible',
+		'Error of form',
+		'Elegible',
+		'Picture does not meet standards',
+		'Incorrect payments',
 		'Visits',
 		'Unique visitors',
 		'Pageviews',
 		'Average time on page']]
 
 df = pd.melt(df, id_vars=['date'], var_name='variable')
+
 df['module'] = df.apply(lambda row: get_modules(row['variable']),axis=1)
 
 dfvisits = df[df['module']=='Visits']
@@ -122,27 +127,29 @@ dfuvisits = df[df['module']=='Unique visits']
 dfpvs =df[df['module']=='Pageviews']
 favgtime = df[df['module']=='Average time on page']
 
-servicesdf = df[df['module']=='#VerifyLocal [Service] performance dashboard']
+
+
+servicesdf = df[df['module']=='Completed applications per channel']
 servicesdf = servicesdf[['date','variable','value']]
-abandondf = df[df['module'] == 'Users who use Verify, abandon or use legacy route when starting an online application']
+abandondf = df[df['module'] == 'New applications started with GOV.UK verify, legacy route and \'other ways to apply\'']
 abandondf = abandondf[['date','variable','value']]
-channeldf = df[df['module'] == 'Channel breakdown for transactions']
+channeldf = df[df['module'] == 'Enquiries about the onine application form']
 channeldf = channeldf[['date','variable','value']]
-rejecteddf = df[df['module'] == 'Reasons for rejected applications']
+rejecteddf = df[df['module'] == 'Reasons for rejected online applications']
 rejecteddf = rejecteddf[['date','variable','value']]
 
 dfvisits.to_csv('static/data/local_visits.csv',index=False,encoding='utf8')
 
-servicesdf.to_csv('static/data/services.csv', index=False,encoding='utf8')
-abandondf.to_csv('static/data/abandon.csv',index=False,encoding='utf8')
-channeldf.to_csv('static/data/channel.csv', index=False,encoding='utf8')
-rejecteddf.to_csv('static/data/rejected.csv', index=False,encoding='utf8')
+servicesdf.to_csv('static/data/bucks/services.csv', index=False,encoding='utf8')
+abandondf.to_csv('static/data/bucks/abandon.csv',index=False,encoding='utf8')
+channeldf.to_csv('static/data/bucks/channel.csv', index=False,encoding='utf8')
+rejecteddf.to_csv('static/data/bucks/rejected.csv', index=False,encoding='utf8')
 
 df1  = df.pivot_table(values='variable',index=['date','value'],columns='module',aggfunc='first')
 df1.reset_index(inplace=True)
 df1.fillna(0,inplace=True )
-df1.to_json('static/data/local_data.json')
-df1.to_csv('static/data/local_data.csv',index=False,encoding='utf8')
+df1.to_json('static/data/bucks/local_data.json')
+df1.to_csv('static/data/bucks/local_data.csv',index=False,encoding='utf8')
 
 metrics = df[(df['module']=='Visits')|(df['module']=='Unique Visitors')|(df['module']=='Pageviews')|(df['module']=='Average time on page')]
 metrics = metrics.pivot(index='date', columns = 'variable',values='value')
@@ -156,7 +163,7 @@ metrics['Unique visitors'] = 'Unique visitors'
 metrics['Pageviews'] = 'Pageviews'
 metrics['Average time on page'] = 'Average time on page'
 metrics = metrics[-1:]
-metrics.to_csv('static/data/web_metrics.csv',index=False,encoding='utf8')
+metrics.to_csv('static/data/bucks/web_metrics.csv',index=False,encoding='utf8')
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0",port=5000,debug=True)
