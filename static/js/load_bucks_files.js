@@ -1,4 +1,4 @@
-services =  d3.csv("static/data/buckinghamshire_services.csv", function(error, data) {
+services =  d3.csv("static/data/bucks/services.csv", function(error, data) {
                     console.log(data);
 
                     var dateFormat = d3.time.format("%Y-%m-%d");
@@ -7,10 +7,10 @@ services =  d3.csv("static/data/buckinghamshire_services.csv", function(error, d
                     data.forEach(function (d) {
                         d.date = dateFormat.parse(d.date);          
 		        });
-                    makeGraphs(error, data);
+                    bucksMakeGraphs(error, data);
             });   
 
-abandon =  d3.csv("static/data/buckinghamshire_abandon.csv", function(error, data) {
+abandon =  d3.csv("static/data/bucks/abandon.csv", function(error, data) {
                     console.log(data);
 
                     var dateFormat = d3.time.format("%Y-%m-%d");
@@ -19,10 +19,10 @@ abandon =  d3.csv("static/data/buckinghamshire_abandon.csv", function(error, dat
                     data.forEach(function (d) {
                         d.date = dateFormat.parse(d.date);          
 		        });
-                    abandonGraphs(error, data);
+                    bucksAbandonGraphs(error, data);
             });   
 
-channel =  d3.csv("static/data/buckinghamshire_channel.csv", function(error, data) {
+channel =  d3.csv("static/data/bucks/channel.csv", function(error, data) {
                     console.log(data);
 
                     var dateFormat = d3.time.format("%Y-%m-%d");
@@ -31,10 +31,10 @@ channel =  d3.csv("static/data/buckinghamshire_channel.csv", function(error, dat
                     data.forEach(function (d) {
                         d.date = dateFormat.parse(d.date);          
 		        });
-                    channelGraphs(error, data);
+                    bucksChannelGraphs(error, data);
             });  
 
-rejected = d3.csv("static/data/buckinghamshire_rejected.csv", function(error, data) {
+rejected = d3.csv("static/data/bucks/rejected.csv", function(error, data) {
                     console.log(data);
 
                     var dateFormat = d3.time.format("%Y-%m-%d");
@@ -43,10 +43,10 @@ rejected = d3.csv("static/data/buckinghamshire_rejected.csv", function(error, da
                     data.forEach(function (d) {
                         d.date = dateFormat.parse(d.date);          
 		        });
-                    rejectedGraphs(error, data);
+                    bucksRejectedGraphs(error, data);
             });  
 
-web_metrics = d3.csv("static/data/buckinghamshire_web_metrics.csv", function(error, data) {
+web_metrics = d3.csv("static/data/bucks/web_metrics.csv", function(error, data) {
                     console.log(data);
 
                     var dateFormat = d3.time.format("%Y-%m-%d");
@@ -55,5 +55,5 @@ web_metrics = d3.csv("static/data/buckinghamshire_web_metrics.csv", function(err
                     data.forEach(function (d) {
                         d.date = dateFormat.parse(d.date);          
 		        });
-                    metricsGraphs(error, data);
+                    bucksMetricsGraphs(error, data);
             });  

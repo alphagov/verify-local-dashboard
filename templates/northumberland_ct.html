@@ -42,7 +42,7 @@
     <script src="{{ url_for('static', filename='lib/js/dc.js') }}"></script>
     <script src="{{ url_for('static', filename='lib/js/keen.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/load_bucks_files.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bucks_seriescharts.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/seriescharts.js') }}"></script>
 
 <!-- 
     <script>
@@ -129,36 +129,35 @@
         <body class="application">
         <header class="page-header">
     <div>
-        <h2 class="heading-large">Parking permit Dashboard for Buckinghamshire County Council</h2>
+        <h2 class="heading-large">Concessionary travel dashboard for Northumberland County Council</h2>
 
     </div>
 </header>
 <p class="lede">
-  Charts showing the performance  data for users of GOV.UK Verify Local Authority 
+ Local authority performance data for #VerifyLocal pilots
 </p>
 
-                <div class="web-metrics" >
-                        
-                    <div id="visits" class="single-metric">
-                        Visits: 
+                <div class="web-metrics">
 
+                    <div id="visits">
+                        Visits: <div class="single-metric">
                         <span class="metrics-display"></span>
-                    </div>
-                    
-                    <div id="unique-visitors" class="single-metric">
-                        Unique Visitors: 
-                        <span class="metrics-display"></span>
-                        
-                    </div>
-                    <div id="pageviews" class="single-metric">
-                       Pageviews: 
-                        <span class="metrics-display"></span>
-                        
                         </div>
-                    <div id="average-time-on-page" class="single-metric">
-                        Average time on page: 
+                    </div>
+                    <div id="unique-visitors">
+                        Unique visitors: <div class="single-metric">
                         <span class="metrics-display"></span>
-
+                        </div>
+                    </div>
+                    <div id="pageviews">
+                        Page views: <div class="single-metric">
+                        <span class="metrics-display"></span>
+                        </div>
+                        </div>
+                    <div id="average-time-on-page">
+                        Average time on page: <div class="single-metric">
+                        <span class="metrics-display">minutes</span>
+                        </div>
                     </div>
                 </div>
             
@@ -170,7 +169,18 @@
 
                             <div class="chart-wrapper">
                                 <!-- <div class="chart-stage"> -->
-
+                                              <div id="abandon-chart">
+                                                <div class="titling">
+                                                    New applications started with GOV.UK Verify, legacy route and 'other ways to apply'             
+                                                    <span class='reset' style='visibility: hidden;'>
+                                                        Selected: <span class='filter'></span>
+                                                    <a class='reset' href='javascript:dc.filterAll();dc.redrawAll();'>Reset all filters</a>
+                                                    
+                                                    <!-- <a href="javascript:barChartAge.filterAll();dc.redrawAll();">reset</a> -->
+                                                
+                                                    </span>
+                                                </div>
+                                            </div>
 
                                     <div id="ser-chart">
                                         <div class="titling">
@@ -184,21 +194,10 @@
                                             </span>
                                         </div>
                                     </div>
-                                    <div id="abandon-chart">
-                                        <div class="titling">
-                                            New applications started with GOV.UK Verify, Legacy route and 'other ways to apply'            
-                                            <span class='reset' style='visibility: hidden;'>
-                                                Selected: <span class='filter'></span>
-                                            <a class='reset' href='javascript:dc.filterAll();dc.redrawAll();'>Reset all filters</a>
-                                            
-                                            <!-- <a href="javascript:barChartAge.filterAll();dc.redrawAll();">reset</a> -->
-                                        
-                                            </span>
-                                        </div>
-                                    </div>
+                                   
                                     <div id="channel-chart">
                                         <div class="titling">
-                                            Enquiries from the online application form          
+                                            Channel breakdown             
                                             <span class='reset' style='visibility: hidden;'>
                                                 Selected: <span class='filter'></span>
                                             <a class='reset' href='javascript:dc.filterAll();dc.redrawAll();'>Reset all filters</a>
@@ -210,7 +209,7 @@
                                     </div>
                                     <div id="rejected-chart">
                                         <div class="titling">
-                                            Reasons for rejected online applications              
+                                            Reasons for rejected applications              
                                             <span class='reset' style='visibility: hidden;'>
                                                 Selected: <span class='filter'></span>
                                             <a class='reset' href='javascript:dc.filterAll();dc.redrawAll();'>Reset all filters</a>

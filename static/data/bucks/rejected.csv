@@ -1,0 +1,26 @@
+date,variable,value
+2017-02-05,Incomplete,110
+2017-02-12,Incomplete,110
+2017-02-19,Incomplete,110
+2017-02-26,Incomplete,110
+2017-03-05,Incomplete,110
+2017-02-05,Illegible,165
+2017-02-12,Illegible,165
+2017-02-19,Illegible,165
+2017-02-26,Illegible,165
+2017-03-05,Illegible,165
+2017-02-05,Error of form,220
+2017-02-12,Error of form,220
+2017-02-19,Error of form,220
+2017-02-26,Error of form,220
+2017-03-05,Error of form,220
+2017-02-05,Picture does not meet standards,330
+2017-02-12,Picture does not meet standards,330
+2017-02-19,Picture does not meet standards,330
+2017-02-26,Picture does not meet standards,330
+2017-03-05,Picture does not meet standards,330
+2017-02-05,Incorrect payments,220
+2017-02-12,Incorrect payments,220
+2017-02-19,Incorrect payments,220
+2017-02-26,Incorrect payments,220
+2017-03-05,Incorrect payments,220
