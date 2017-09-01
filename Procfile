@@ -1,1 +1,1 @@
-web: gunicorn verify_local_template:app
+web: gunicorn verify_local:app
