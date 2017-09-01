@@ -15,7 +15,7 @@ CsrfProtect(app)
 auth = HTTPBasicAuth()
 
 users = {
-    "johnbyrne": "QqYPspA56ftyVIu+diPu"
+    "buckinghamshire": "bucksdataviz"
 }
 
 @auth.get_password
