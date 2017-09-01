@@ -192,5 +192,6 @@ avtop = metrics['average_time_on_pageN']
 avtop = avtop.reset_index()
 avtop = avtop['average_time_on_pageN'][0]
 
+port = os.getenv('PORT', '5050')
 if __name__ == "__main__":
-    app.run(host="0.0.0.0",port=5000,debug=True)
+    app.run(host="0.0.0.0",port=int(port),debug=True)
