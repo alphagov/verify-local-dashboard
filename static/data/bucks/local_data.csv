@@ -1,51 +1,133 @@
-date,value,Average time on page,Completed applications per channel,Enquiries about the onine application form,"New applications started with GOV.UK verify, legacy route and 'other ways to apply'",Number of user enquiries,Pageviews,Reasons for rejected online applications,Unique Visitors,Visits
-2017-02-05,1.2,Average time on page,0,0,0,0,0,0,0,0
-2017-02-05,105,0,Telephone,Certified companies,0,0,0,0,0,0
-2017-02-05,110,0,Post,Application process,Use GOV.UK Verify,0,0,Incomplete,0,0
-2017-02-05,165,0,Face to face,Eligibility,Legacy route,0,0,Illegible,0,0
-2017-02-05,178,0,0,0,0,0,0,0,Unique visitors,0
-2017-02-05,198,0,0,0,0,0,0,0,0,Visits
-2017-02-05,220,0,Online GOV.UK Verify,GOV.UK Verify,Other ways to apply,0,0,Error of form,0,0
-2017-02-05,297,0,0,0,0,0,Pageviews,0,0,0
-2017-02-05,330,0,Online legacy route,Application outcome,0,0,0,Picture does not meet standards,0,0
-2017-02-05,930,0,0,0,0,Total contact,0,0,0,0
-2017-02-12,1.2,Average time on page,0,0,0,0,0,0,0,0
-2017-02-12,105,0,Telephone,Certified companies,0,0,0,0,0,0
-2017-02-12,110,0,Post,Application process,Use GOV.UK Verify,0,0,Incomplete,0,0
-2017-02-12,165,0,Face to face,Eligibility,Legacy route,0,0,Illegible,0,0
-2017-02-12,178,0,0,0,0,0,0,0,Unique visitors,0
-2017-02-12,198,0,0,0,0,0,0,0,0,Visits
-2017-02-12,220,0,Online GOV.UK Verify,GOV.UK Verify,Other ways to apply,0,0,Error of form,0,0
-2017-02-12,297,0,0,0,0,0,Pageviews,0,0,0
-2017-02-12,330,0,Online legacy route,Application outcome,0,0,0,Picture does not meet standards,0,0
-2017-02-12,930,0,0,0,0,Total contact,0,0,0,0
-2017-02-19,1.2,Average time on page,0,0,0,0,0,0,0,0
-2017-02-19,105,0,Telephone,Certified companies,0,0,0,0,0,0
-2017-02-19,110,0,Post,Application process,Use GOV.UK Verify,0,0,Incomplete,0,0
-2017-02-19,165,0,Face to face,Eligibility,Legacy route,0,0,Illegible,0,0
-2017-02-19,178,0,0,0,0,0,0,0,Unique visitors,0
-2017-02-19,198,0,0,0,0,0,0,0,0,Visits
-2017-02-19,220,0,Online GOV.UK Verify,GOV.UK Verify,Other ways to apply,0,0,Error of form,0,0
-2017-02-19,297,0,0,0,0,0,Pageviews,0,0,0
-2017-02-19,330,0,Online legacy route,Application outcome,0,0,0,Picture does not meet standards,0,0
-2017-02-19,930,0,0,0,0,Total contact,0,0,0,0
-2017-02-26,1.2,Average time on page,0,0,0,0,0,0,0,0
-2017-02-26,105,0,Telephone,Certified companies,0,0,0,0,0,0
-2017-02-26,110,0,Post,Application process,Use GOV.UK Verify,0,0,Incomplete,0,0
-2017-02-26,165,0,Face to face,Eligibility,Legacy route,0,0,Illegible,0,0
-2017-02-26,178,0,0,0,0,0,0,0,Unique visitors,0
-2017-02-26,198,0,0,0,0,0,0,0,0,Visits
-2017-02-26,220,0,Online GOV.UK Verify,GOV.UK Verify,Other ways to apply,0,0,Error of form,0,0
-2017-02-26,297,0,0,0,0,0,Pageviews,0,0,0
-2017-02-26,330,0,Online legacy route,Application outcome,0,0,0,Picture does not meet standards,0,0
-2017-02-26,930,0,0,0,0,Total contact,0,0,0,0
-2017-03-05,1.2,Average time on page,0,0,0,0,0,0,0,0
-2017-03-05,105,0,Telephone,Certified companies,0,0,0,0,0,0
-2017-03-05,110,0,Post,Application process,Use GOV.UK Verify,0,0,Incomplete,0,0
-2017-03-05,165,0,Face to face,Eligibility,Legacy route,0,0,Illegible,0,0
-2017-03-05,178,0,0,0,0,0,0,0,Unique visitors,0
-2017-03-05,198,0,0,0,0,0,0,0,0,Visits
-2017-03-05,220,0,Online GOV.UK Verify,GOV.UK Verify,Other ways to apply,0,0,Error of form,0,0
-2017-03-05,297,0,0,0,0,0,Pageviews,0,0,0
-2017-03-05,330,0,Online legacy route,Application outcome,0,0,0,Picture does not meet standards,0,0
-2017-03-05,930,0,0,0,0,Total contact,0,0,0,0
+date,value,Average time on page,Completed applications per channel,Enquiries about the onine application form,"New applications started with GOV.UK verify, legacy route and 'other ways to apply'",Number of user enquiries,Pageviews,Reasons for rejected online applications,Success rate,Unique Visitors,User satisfaction,Visits
+2017-07-17,07:03,Average time on page,0,0,0,0,0,0,0,0,0,0
+2017-07-17,12,0,0,0,0,0,0,Error of form,0,0,0,0
+2017-07-17,1232,0,0,0,0,Total contact,0,0,0,0,0,0
+2017-07-17,21,0,0,0,0,0,0,Incorrect payments,0,0,0,0
+2017-07-17,212,0,Online legacy route,0,0,0,0,0,0,0,0,0
+2017-07-17,213,0,0,Eligibility,0,0,0,0,0,0,0,0
+2017-07-17,22,0,0,0,Other ways to apply,0,0,Incomplete,0,0,0,0
+2017-07-17,223,0,0,0,Legacy route,0,0,0,0,0,0,0
+2017-07-17,23,0,0,0,0,0,0,Illegible,0,0,0,0
+2017-07-17,231,0,Online GOV.UK Verify,0,0,0,0,0,0,0,0,0
+2017-07-17,232,0,Face to face,0,0,0,0,0,0,0,0,0
+2017-07-17,321,0,0,Certified companies,0,0,0,0,0,0,0,0
+2017-07-17,322,0,Post,0,0,0,0,0,0,0,0,0
+2017-07-17,33,0,Telephone,0,0,0,0,0,0,0,0,0
+2017-07-17,4,0,0,0,0,0,0,Picture does not meet standards,0,0,0,0
+2017-07-17,432,0,0,Application process,0,0,0,0,0,0,0,0
+2017-07-17,433,0,0,0,Use GOV.UK Verify,0,0,0,0,0,0,0
+2017-07-17,5342,0,0,0,0,0,0,0,0,Unique visitors,0,0
+2017-07-17,5545,0,0,0,0,0,0,0,0,0,0,Visits
+2017-07-17,65543,0,0,0,0,0,Pageviews,0,0,0,0,0
+2017-07-17,67,0,0,0,0,0,0,0,Success rate,0,0,0
+2017-07-17,78,0,0,0,0,0,0,0,0,0,User satisfaction,0
+2017-07-24,06:03,Average time on page,0,0,0,0,0,0,0,0,0,0
+2017-07-24,12,0,0,0,0,0,0,Error of form,0,0,0,0
+2017-07-24,1232,0,0,0,0,Total contact,0,0,0,0,0,0
+2017-07-24,21,0,0,0,0,0,0,Incorrect payments,0,0,0,0
+2017-07-24,212,0,Online legacy route,0,0,0,0,0,0,0,0,0
+2017-07-24,213,0,0,Eligibility,0,0,0,0,0,0,0,0
+2017-07-24,22,0,0,0,Other ways to apply,0,0,Incomplete,0,0,0,0
+2017-07-24,223,0,0,0,Legacy route,0,0,0,0,0,0,0
+2017-07-24,23,0,0,0,0,0,0,Illegible,0,0,0,0
+2017-07-24,231,0,Online GOV.UK Verify,0,0,0,0,0,0,0,0,0
+2017-07-24,232,0,Face to face,0,0,0,0,0,0,0,0,0
+2017-07-24,321,0,0,Certified companies,0,0,0,0,0,0,0,0
+2017-07-24,322,0,Post,0,0,0,0,0,0,0,0,0
+2017-07-24,33,0,Telephone,0,0,0,0,0,0,0,0,0
+2017-07-24,4,0,0,0,0,0,0,Picture does not meet standards,0,0,0,0
+2017-07-24,432,0,0,Application process,0,0,0,0,0,0,0,0
+2017-07-24,433,0,0,0,Use GOV.UK Verify,0,0,0,0,0,0,0
+2017-07-24,5342,0,0,0,0,0,0,0,0,Unique visitors,0,0
+2017-07-24,5545,0,0,0,0,0,0,0,0,0,0,Visits
+2017-07-24,65543,0,0,0,0,0,Pageviews,0,0,0,0,0
+2017-07-24,67,0,0,0,0,0,0,0,Success rate,0,0,0
+2017-07-24,78,0,0,0,0,0,0,0,0,0,User satisfaction,0
+2017-07-31,05:03,Average time on page,0,0,0,0,0,0,0,0,0,0
+2017-07-31,12,0,0,0,0,0,0,Error of form,0,0,0,0
+2017-07-31,1232,0,0,0,0,Total contact,0,0,0,0,0,0
+2017-07-31,21,0,0,0,0,0,0,Incorrect payments,0,0,0,0
+2017-07-31,212,0,Online legacy route,0,0,0,0,0,0,0,0,0
+2017-07-31,213,0,0,Eligibility,0,0,0,0,0,0,0,0
+2017-07-31,22,0,0,0,Other ways to apply,0,0,Incomplete,0,0,0,0
+2017-07-31,223,0,0,0,Legacy route,0,0,0,0,0,0,0
+2017-07-31,23,0,0,0,0,0,0,Illegible,0,0,0,0
+2017-07-31,231,0,Online GOV.UK Verify,0,0,0,0,0,0,0,0,0
+2017-07-31,232,0,Face to face,0,0,0,0,0,0,0,0,0
+2017-07-31,321,0,0,Certified companies,0,0,0,0,0,0,0,0
+2017-07-31,322,0,Post,0,0,0,0,0,0,0,0,0
+2017-07-31,33,0,Telephone,0,0,0,0,0,0,0,0,0
+2017-07-31,4,0,0,0,0,0,0,Picture does not meet standards,0,0,0,0
+2017-07-31,432,0,0,Application process,0,0,0,0,0,0,0,0
+2017-07-31,433,0,0,0,Use GOV.UK Verify,0,0,0,0,0,0,0
+2017-07-31,5342,0,0,0,0,0,0,0,0,Unique visitors,0,0
+2017-07-31,5545,0,0,0,0,0,0,0,0,0,0,Visits
+2017-07-31,65543,0,0,0,0,0,Pageviews,0,0,0,0,0
+2017-07-31,67,0,0,0,0,0,0,0,Success rate,0,0,0
+2017-07-31,78,0,0,0,0,0,0,0,0,0,User satisfaction,0
+2017-08-07,04:03,Average time on page,0,0,0,0,0,0,0,0,0,0
+2017-08-07,12,0,0,0,0,0,0,Error of form,0,0,0,0
+2017-08-07,1232,0,0,0,0,Total contact,0,0,0,0,0,0
+2017-08-07,21,0,0,0,0,0,0,Incorrect payments,0,0,0,0
+2017-08-07,212,0,Online legacy route,0,0,0,0,0,0,0,0,0
+2017-08-07,213,0,0,Eligibility,0,0,0,0,0,0,0,0
+2017-08-07,22,0,0,0,Other ways to apply,0,0,Incomplete,0,0,0,0
+2017-08-07,223,0,0,0,Legacy route,0,0,0,0,0,0,0
+2017-08-07,23,0,0,0,0,0,0,Illegible,0,0,0,0
+2017-08-07,231,0,Online GOV.UK Verify,0,0,0,0,0,0,0,0,0
+2017-08-07,232,0,Face to face,0,0,0,0,0,0,0,0,0
+2017-08-07,321,0,0,Certified companies,0,0,0,0,0,0,0,0
+2017-08-07,322,0,Post,0,0,0,0,0,0,0,0,0
+2017-08-07,33,0,Telephone,0,0,0,0,0,0,0,0,0
+2017-08-07,4,0,0,0,0,0,0,Picture does not meet standards,0,0,0,0
+2017-08-07,432,0,0,Application process,0,0,0,0,0,0,0,0
+2017-08-07,433,0,0,0,Use GOV.UK Verify,0,0,0,0,0,0,0
+2017-08-07,5342,0,0,0,0,0,0,0,0,Unique visitors,0,0
+2017-08-07,5545,0,0,0,0,0,0,0,0,0,0,Visits
+2017-08-07,65543,0,0,0,0,0,Pageviews,0,0,0,0,0
+2017-08-07,67,0,0,0,0,0,0,0,Success rate,0,0,0
+2017-08-07,78,0,0,0,0,0,0,0,0,0,User satisfaction,0
+2017-08-14,03:03,Average time on page,0,0,0,0,0,0,0,0,0,0
+2017-08-14,12,0,0,0,0,0,0,Error of form,0,0,0,0
+2017-08-14,1232,0,0,0,0,Total contact,0,0,0,0,0,0
+2017-08-14,21,0,0,0,0,0,0,Incorrect payments,0,0,0,0
+2017-08-14,212,0,Online legacy route,0,0,0,0,0,0,0,0,0
+2017-08-14,213,0,0,Eligibility,0,0,0,0,0,0,0,0
+2017-08-14,22,0,0,0,Other ways to apply,0,0,Incomplete,0,0,0,0
+2017-08-14,223,0,0,0,Legacy route,0,0,0,0,0,0,0
+2017-08-14,23,0,0,0,0,0,0,Illegible,0,0,0,0
+2017-08-14,231,0,Online GOV.UK Verify,0,0,0,0,0,0,0,0,0
+2017-08-14,232,0,Face to face,0,0,0,0,0,0,0,0,0
+2017-08-14,321,0,0,Certified companies,0,0,0,0,0,0,0,0
+2017-08-14,322,0,Post,0,0,0,0,0,0,0,0,0
+2017-08-14,33,0,Telephone,0,0,0,0,0,0,0,0,0
+2017-08-14,4,0,0,0,0,0,0,Picture does not meet standards,0,0,0,0
+2017-08-14,432,0,0,Application process,0,0,0,0,0,0,0,0
+2017-08-14,433,0,0,0,Use GOV.UK Verify,0,0,0,0,0,0,0
+2017-08-14,5342,0,0,0,0,0,0,0,0,Unique visitors,0,0
+2017-08-14,5545,0,0,0,0,0,0,0,0,0,0,Visits
+2017-08-14,65543,0,0,0,0,0,Pageviews,0,0,0,0,0
+2017-08-14,67,0,0,0,0,0,0,0,Success rate,0,0,0
+2017-08-14,78,0,0,0,0,0,0,0,0,0,User satisfaction,0
+2017-08-21,02:03,Average time on page,0,0,0,0,0,0,0,0,0,0
+2017-08-21,12,0,0,0,0,0,0,Error of form,0,0,0,0
+2017-08-21,1232,0,0,0,0,Total contact,0,0,0,0,0,0
+2017-08-21,21,0,0,0,0,0,0,Incorrect payments,0,0,0,0
+2017-08-21,212,0,Online legacy route,0,0,0,0,0,0,0,0,0
+2017-08-21,213,0,0,Eligibility,0,0,0,0,0,0,0,0
+2017-08-21,22,0,0,0,Other ways to apply,0,0,Incomplete,0,0,0,0
+2017-08-21,223,0,0,0,Legacy route,0,0,0,0,0,0,0
+2017-08-21,23,0,0,0,0,0,0,Illegible,0,0,0,0
+2017-08-21,231,0,Online GOV.UK Verify,0,0,0,0,0,0,0,0,0
+2017-08-21,232,0,Face to face,0,0,0,0,0,0,0,0,0
+2017-08-21,321,0,0,Certified companies,0,0,0,0,0,0,0,0
+2017-08-21,322,0,Post,0,0,0,0,0,0,0,0,0
+2017-08-21,33,0,Telephone,0,0,0,0,0,0,0,0,0
+2017-08-21,4,0,0,0,0,0,0,Picture does not meet standards,0,0,0,0
+2017-08-21,432,0,0,Application process,0,0,0,0,0,0,0,0
+2017-08-21,433,0,0,0,Use GOV.UK Verify,0,0,0,0,0,0,0
+2017-08-21,5342,0,0,0,0,0,0,0,0,Unique visitors,0,0
+2017-08-21,5545,0,0,0,0,0,0,0,0,0,0,Visits
+2017-08-21,65543,0,0,0,0,0,Pageviews,0,0,0,0,0
+2017-08-21,67,0,0,0,0,0,0,0,Success rate,0,0,0
+2017-08-21,78,0,0,0,0,0,0,0,0,0,User satisfaction,0

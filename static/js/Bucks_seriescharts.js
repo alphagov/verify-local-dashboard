@@ -393,3 +393,146 @@ dc.renderAll();
 
 };
 
+function bucksSuccessRateGraphs(error, data) {
+// charts
+    var rejected_chart = dc.seriesChart("#success-rate-chart");
+
+    var coerce_row = function(d){
+        return {
+            time: d.date,
+            field: d.variable,
+            count: +d.value,
+        };
+    };
+
+    var dataset = data.map(coerce_row);
+
+    var addC = function(p, d){ return p + d.count;},
+        remC = function(p, d){ return p - d.count;},
+        // addT = function(p, d){ return p + d.temperature;},
+        // remT = function(p, d){ return p - d.temperature;},
+        ini = function(){ return 0;},
+        ndx = crossfilter(dataset),
+        all = ndx.groupAll().reduce(addC, remC, ini),
+        fields = ndx.dimension(function(d){ return d.field;}).group(),
+        time_field = ndx.dimension(function(d) { return [d.time, d.field];}),
+        time_fields = time_field.group().reduce(addC, remC, ini);
+        // temperature = ndx.dimension(function(d){return d.temperature;}),
+        // temperatures = temperature.group().reduce(addC, remC, ini);
+        // extent = d3.extent(dataset, function(d){return d.time;}),
+
+    var timeDim = ndx.dimension(function (d) {
+        return d3.time.week(d.time);
+    });
+    var minTime = timeDim.bottom(1)[0]["time"];
+    var maxTime = timeDim.top(1)[0]["time"];
+    console.log(minTime + " : " +maxTime)
+        // date_format = d3.time.format("%b %d %I:%M %p"),
+
+    // d3.select("#date-start")
+    //     .attr("datetime", extent[0])
+    //     .text(date_format(extent[0]));
+    // d3.select("#date-end")
+    //     .attr("datetime", extent[1])
+    //     .text(date_format(extent[1]));
+
+    dc.dataCount("#data-count")
+    // Since the number of records (returned by .size()) isn't the same as the number
+    // of data points we're aggregating, supply a size-like object that returns the
+    // total number of data points represented.
+        .dimension({size: function(){return dataset.reduce(addC, 0);}})
+        .group(all);
+
+    rejected_chart
+        .width(928)
+        .height(400)
+        .dimension(time_field)
+        .group(time_fields)
+        .seriesAccessor(function(d) { return d.key[1]; })
+        .keyAccessor(function(d) {return d.key[0];})
+        .elasticY(true)
+        .elasticX(true)
+        .xAxisLabel("Date")
+        .yAxisLabel("Success rate")
+        // .x(d3.scale.linear().domain([minTime,maxTime]))
+        .x(d3.time.scale().domain([minTime,maxTime]))
+        .renderHorizontalGridLines(true)
+        .renderVerticalGridLines(true)
+        .legend(dc.legend().x(55).y(26).itemHeight(13).gap(5))
+        .ordinalColors(['#097F96'])
+        .brushOn(false)
+        .yAxis().ticks(5);
+    dc.renderAll();
+};
+
+function bucksCustomerSatGraphs(error, data) {
+// charts
+    var rejected_chart = dc.seriesChart("#customer-sat-chart");
+
+    var coerce_row = function(d){
+        return {
+            time: d.date,
+            field: d.variable,
+            count: +d.value,
+        };
+    };
+
+    var dataset = data.map(coerce_row);
+
+    var addC = function(p, d){ return p + d.count;},
+        remC = function(p, d){ return p - d.count;},
+        // addT = function(p, d){ return p + d.temperature;},
+        // remT = function(p, d){ return p - d.temperature;},
+        ini = function(){ return 0;},
+        ndx = crossfilter(dataset),
+        all = ndx.groupAll().reduce(addC, remC, ini),
+        fields = ndx.dimension(function(d){ return d.field;}).group(),
+        time_field = ndx.dimension(function(d) { return [d.time, d.field];}),
+        time_fields = time_field.group().reduce(addC, remC, ini);
+        // temperature = ndx.dimension(function(d){return d.temperature;}),
+        // temperatures = temperature.group().reduce(addC, remC, ini);
+        // extent = d3.extent(dataset, function(d){return d.time;}),
+
+    var timeDim = ndx.dimension(function (d) {
+        return d3.time.week(d.time);
+    });
+    var minTime = timeDim.bottom(1)[0]["time"];
+    var maxTime = timeDim.top(1)[0]["time"];
+    console.log(minTime + " : " +maxTime)
+        // date_format = d3.time.format("%b %d %I:%M %p"),
+
+    // d3.select("#date-start")
+    //     .attr("datetime", extent[0])
+    //     .text(date_format(extent[0]));
+    // d3.select("#date-end")
+    //     .attr("datetime", extent[1])
+    //     .text(date_format(extent[1]));
+
+    dc.dataCount("#data-count")
+    // Since the number of records (returned by .size()) isn't the same as the number
+    // of data points we're aggregating, supply a size-like object that returns the
+    // total number of data points represented.
+        .dimension({size: function(){return dataset.reduce(addC, 0);}})
+        .group(all);
+
+    rejected_chart
+        .width(928)
+        .height(400)
+        .dimension(time_field)
+        .group(time_fields)
+        .seriesAccessor(function(d) { return d.key[1]; })
+        .keyAccessor(function(d) {return d.key[0];})
+        .elasticY(true)
+        .elasticX(true)
+        .xAxisLabel("Date")
+        .yAxisLabel("Customer satisfaction")
+        // .x(d3.scale.linear().domain([minTime,maxTime]))
+        .x(d3.time.scale().domain([minTime,maxTime]))
+        .renderHorizontalGridLines(true)
+        .renderVerticalGridLines(true)
+        .legend(dc.legend().x(55).y(26).itemHeight(13).gap(5))
+        .ordinalColors(['#097F96'])
+        .brushOn(false)
+        .yAxis().ticks(5);
+    dc.renderAll();
+};

@@ -155,74 +155,101 @@
                         <span class="metrics-display"></span>
                         
                         </div>
+<!-- 
                     <div id="average-time-on-page" class="single-metric">
                         Average time on page: 
                         <span class="metrics-display"></span>
+
+                    </div> -->
+                     <div class="single-metric">
+                        Average time on page: 
+                        <span class="metrics-display">{{avtop|safe}}</span>
 
                     </div>
                 </div>
             
            
             <div class="col-md-5">
-            
-                
+
+                    <div class="chart-wrapper">
+                        <!-- <div class="chart-stage"> -->
 
 
-                            <div class="chart-wrapper">
-                                <!-- <div class="chart-stage"> -->
-
-
-                                    <div id="ser-chart">
-                                        <div class="titling">
-                                            Service chart              
-                                            <span class='reset' style='visibility: hidden;'>
-                                                Selected: <span class='filter'></span>
-                                            <a class='reset' href='javascript:dc.filterAll();dc.redrawAll();'>Reset all filters</a>
-                                            
-                                            <!-- <a href="javascript:barChartAge.filterAll();dc.redrawAll();">reset</a> -->
-                                        
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div id="abandon-chart">
-                                        <div class="titling">
-                                            New applications started with GOV.UK Verify, Legacy route and 'other ways to apply'            
-                                            <span class='reset' style='visibility: hidden;'>
-                                                Selected: <span class='filter'></span>
-                                            <a class='reset' href='javascript:dc.filterAll();dc.redrawAll();'>Reset all filters</a>
-                                            
-                                            <!-- <a href="javascript:barChartAge.filterAll();dc.redrawAll();">reset</a> -->
-                                        
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div id="channel-chart">
-                                        <div class="titling">
-                                            Enquiries from the online application form          
-                                            <span class='reset' style='visibility: hidden;'>
-                                                Selected: <span class='filter'></span>
-                                            <a class='reset' href='javascript:dc.filterAll();dc.redrawAll();'>Reset all filters</a>
-                                            
-                                            <!-- <a href="javascript:barChartAge.filterAll();dc.redrawAll();">reset</a> -->
-                                        
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div id="rejected-chart">
-                                        <div class="titling">
-                                            Reasons for rejected online applications              
-                                            <span class='reset' style='visibility: hidden;'>
-                                                Selected: <span class='filter'></span>
-                                            <a class='reset' href='javascript:dc.filterAll();dc.redrawAll();'>Reset all filters</a>
-                                            
-                                            <!-- <a href="javascript:barChartAge.filterAll();dc.redrawAll();">reset</a> -->
-                                        
-                                            </span>
-                                        </div>
-                                    </div>
+                            <div id="ser-chart">
+                                <div class="titling">
+                                    Service chart              
+                                    <span class='reset' style='visibility: hidden;'>
+                                        Selected: <span class='filter'></span>
+                                    <a class='reset' href='javascript:dc.filterAll();dc.redrawAll();'>Reset all filters</a>
+                                    
+                                    <!-- <a href="javascript:barChartAge.filterAll();dc.redrawAll();">reset</a> -->
+                                
+                                    </span>
+                                </div>
+                            </div>
+                            <div id="abandon-chart">
+                                <div class="titling">
+                                    New applications started with GOV.UK Verify, Legacy route and 'other ways to apply'            
+                                    <span class='reset' style='visibility: hidden;'>
+                                        Selected: <span class='filter'></span>
+                                    <a class='reset' href='javascript:dc.filterAll();dc.redrawAll();'>Reset all filters</a>
+                                    
+                                    <!-- <a href="javascript:barChartAge.filterAll();dc.redrawAll();">reset</a> -->
+                                
+                                    </span>
+                                </div>
+                            </div>
+                            <div id="success-rate-chart">
+                                <div class="titling">
+                                    Success rate             
+                                    <span class='reset' style='visibility: hidden;'>
+                                        Selected: <span class='filter'></span>
+                                    <a class='reset' href='javascript:dc.filterAll();dc.redrawAll();'>Reset all filters</a>
+                                    
+                                    <!-- <a href="javascript:barChartAge.filterAll();dc.redrawAll();">reset</a> -->
+                                
+                                    </span>
+                                </div>
+                            </div>
+                            <div id="customer-sat-chart">
+                                <div class="titling">
+                                    User satisfaction            
+                                    <span class='reset' style='visibility: hidden;'>
+                                        Selected: <span class='filter'></span>
+                                    <a class='reset' href='javascript:dc.filterAll();dc.redrawAll();'>Reset all filters</a>
+                                    
+                                    <!-- <a href="javascript:barChartAge.filterAll();dc.redrawAll();">reset</a> -->
+                                
+                                    </span>
+                                </div>
+                            </div>
+                            <div id="channel-chart">
+                                <div class="titling">
+                                    Enquiries from the online application form          
+                                    <span class='reset' style='visibility: hidden;'>
+                                        Selected: <span class='filter'></span>
+                                    <a class='reset' href='javascript:dc.filterAll();dc.redrawAll();'>Reset all filters</a>
+                                    
+                                    <!-- <a href="javascript:barChartAge.filterAll();dc.redrawAll();">reset</a> -->
+                                
+                                    </span>
+                                </div>
+                            </div>
+                            <div id="rejected-chart">
+                                <div class="titling">
+                                    Reasons for rejected online applications              
+                                    <span class='reset' style='visibility: hidden;'>
+                                        Selected: <span class='filter'></span>
+                                    <a class='reset' href='javascript:dc.filterAll();dc.redrawAll();'>Reset all filters</a>
+                                    
+                                    <!-- <a href="javascript:barChartAge.filterAll();dc.redrawAll();">reset</a> -->
+                                
+                                    </span>
+                                </div>
+                            </div>
 
                             <!-- </div> -->
-                        </div>  
+                <!-- </div>   -->
 </main>
 </div>
 </body>

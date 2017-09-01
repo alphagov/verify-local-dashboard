@@ -57,3 +57,29 @@ web_metrics = d3.csv("static/data/bucks/web_metrics.csv", function(error, data) 
 		        });
                     bucksMetricsGraphs(error, data);
             });  
+
+success_rate =  d3.csv("static/data/bucks/successrate.csv", function(error, data) {
+                    console.log(data);
+
+                    var dateFormat = d3.time.format("%Y-%m-%d");
+                    var numberFormat = d3.format(",d");
+                    
+                    data.forEach(function (d) {
+                        d.date = dateFormat.parse(d.date);          
+                });
+                    bucksSuccessRateGraphs(error, data);
+            });   
+
+customer_sat =  d3.csv("static/data/bucks/customersat.csv", function(error, data) {
+                    console.log(data);
+
+                    var dateFormat = d3.time.format("%Y-%m-%d");
+                    var numberFormat = d3.format(",d");
+                    
+                    data.forEach(function (d) {
+                        d.date = dateFormat.parse(d.date);          
+                });
+                    bucksCustomerSatGraphs(error, data);
+            });   
+
+

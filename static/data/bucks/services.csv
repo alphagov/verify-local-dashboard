@@ -1,26 +1,31 @@
 date,variable,value
-2017-02-05,Post,110
-2017-02-12,Post,110
-2017-02-19,Post,110
-2017-02-26,Post,110
-2017-03-05,Post,110
-2017-02-05,Face to face,165
-2017-02-12,Face to face,165
-2017-02-19,Face to face,165
-2017-02-26,Face to face,165
-2017-03-05,Face to face,165
-2017-02-05,Online GOV.UK Verify,220
-2017-02-12,Online GOV.UK Verify,220
-2017-02-19,Online GOV.UK Verify,220
-2017-02-26,Online GOV.UK Verify,220
-2017-03-05,Online GOV.UK Verify,220
-2017-02-05,Online legacy route,330
-2017-02-12,Online legacy route,330
-2017-02-19,Online legacy route,330
-2017-02-26,Online legacy route,330
-2017-03-05,Online legacy route,330
-2017-02-05,Telephone,105
-2017-02-12,Telephone,105
-2017-02-19,Telephone,105
-2017-02-26,Telephone,105
-2017-03-05,Telephone,105
+2017-08-21,Post,322
+2017-08-14,Post,322
+2017-08-07,Post,322
+2017-07-31,Post,322
+2017-07-24,Post,322
+2017-07-17,Post,322
+2017-08-21,Face to face,232
+2017-08-14,Face to face,232
+2017-08-07,Face to face,232
+2017-07-31,Face to face,232
+2017-07-24,Face to face,232
+2017-07-17,Face to face,232
+2017-08-21,Online GOV.UK Verify,231
+2017-08-14,Online GOV.UK Verify,231
+2017-08-07,Online GOV.UK Verify,231
+2017-07-31,Online GOV.UK Verify,231
+2017-07-24,Online GOV.UK Verify,231
+2017-07-17,Online GOV.UK Verify,231
+2017-08-21,Online legacy route,212
+2017-08-14,Online legacy route,212
+2017-08-07,Online legacy route,212
+2017-07-31,Online legacy route,212
+2017-07-24,Online legacy route,212
+2017-07-17,Online legacy route,212
+2017-08-21,Telephone,33
+2017-08-14,Telephone,33
+2017-08-07,Telephone,33
+2017-07-31,Telephone,33
+2017-07-24,Telephone,33
+2017-07-17,Telephone,33

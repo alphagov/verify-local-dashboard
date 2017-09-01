@@ -1,26 +1,31 @@
 date,variable,value
-2017-02-05,Incomplete,110
-2017-02-12,Incomplete,110
-2017-02-19,Incomplete,110
-2017-02-26,Incomplete,110
-2017-03-05,Incomplete,110
-2017-02-05,Illegible,165
-2017-02-12,Illegible,165
-2017-02-19,Illegible,165
-2017-02-26,Illegible,165
-2017-03-05,Illegible,165
-2017-02-05,Error of form,220
-2017-02-12,Error of form,220
-2017-02-19,Error of form,220
-2017-02-26,Error of form,220
-2017-03-05,Error of form,220
-2017-02-05,Picture does not meet standards,330
-2017-02-12,Picture does not meet standards,330
-2017-02-19,Picture does not meet standards,330
-2017-02-26,Picture does not meet standards,330
-2017-03-05,Picture does not meet standards,330
-2017-02-05,Incorrect payments,220
-2017-02-12,Incorrect payments,220
-2017-02-19,Incorrect payments,220
-2017-02-26,Incorrect payments,220
-2017-03-05,Incorrect payments,220
+2017-08-21,Incomplete,22
+2017-08-14,Incomplete,22
+2017-08-07,Incomplete,22
+2017-07-31,Incomplete,22
+2017-07-24,Incomplete,22
+2017-07-17,Incomplete,22
+2017-08-21,Illegible,23
+2017-08-14,Illegible,23
+2017-08-07,Illegible,23
+2017-07-31,Illegible,23
+2017-07-24,Illegible,23
+2017-07-17,Illegible,23
+2017-08-21,Error of form,12
+2017-08-14,Error of form,12
+2017-08-07,Error of form,12
+2017-07-31,Error of form,12
+2017-07-24,Error of form,12
+2017-07-17,Error of form,12
+2017-08-21,Picture does not meet standards,4
+2017-08-14,Picture does not meet standards,4
+2017-08-07,Picture does not meet standards,4
+2017-07-31,Picture does not meet standards,4
+2017-07-24,Picture does not meet standards,4
+2017-07-17,Picture does not meet standards,4
+2017-08-21,Incorrect payments,21
+2017-08-14,Incorrect payments,21
+2017-08-07,Incorrect payments,21
+2017-07-31,Incorrect payments,21
+2017-07-24,Incorrect payments,21
+2017-07-17,Incorrect payments,21

@@ -3,17 +3,36 @@ import json
 from flask import Flask
 from flask import request, url_for, redirect, render_template, jsonify
 import pandas as pd
-
+import sys
+from io import StringIO
+from flask.ext.wtf import form
+from flask_wtf.csrf import CsrfProtect
+from flask_httpauth import HTTPBasicAuth
 
 app = Flask(__name__)
+app.secret_key = 'GTF_CSRF_hackers!'
+CsrfProtect(app)
+auth = HTTPBasicAuth()
+
+users = {
+    "johnbyrne": "QqYPspA56ftyVIu+diPu"
+}
+
+@auth.get_password
+def get_pw(username):
+    if username in users:
+        return users.get(username)
+    return None
 
 @app.route('/buckinghamshire')
-
+@auth.login_required
 def index():
         # return render_template('series_local.html')
         # return render_template('area_local.html')
         # return render_template('local.html')
-        return render_template('buckinghamshire.html')
+        return render_template('buckinghamshire.html',
+                        avtop=avtop)
+        
         # return render_template('local_all_dims.html')
     
 # sheets = requests.get('https://spreadsheets.google.com/feeds/list/1CHmcBuINK-zcd8JAnIvrzswzIGxLEyW3yFSKx_pcV30/2/public/basic?alt=json')
@@ -37,30 +56,36 @@ def get_modules(mod):
 
 def format_str(dstr):
 
-	datastr = dstr.replace(':','":"')
+	datastr = dstr.replace(': ','":"')
 	datastr = datastr.replace(',','","')
 	datastr = datastr.replace(' ','')
+	# datastr = datastr.replace('0:','0\:')
 	datastr = '{"'+datastr+'"}'
 
 	datajson = json.loads(datastr)
 
 	return datajson
-
+df = pd.DataFrame()
 dictlist = []
 i = 0
 for data in jsondata['feed']['entry']:
 	datastr = data['content']['$t']
 	datestr = data['title']['$t']
-	
 
 	datajson = format_str(datastr)
+	
 	datajson['date'] = jsondata['feed']['entry'][i]['title']['$t']
-	i = i+1
+	
+	# data_df['date'] = jsondata['feed']['entry'][i]['title']['$t']
+	
+	# df = df.append(data_df)
+	# print(i)
 
+	i = i+1
 	dictlist.append(datajson)
 
 df = pd.DataFrame.from_dict(dictlist)
-
+print(df.head())
 
 replace_columns = {"abandonapplication":"Other ways to apply",
        "numberofpicturedoesnotmeetstandards":"Picture does not meet standards",
@@ -86,7 +111,9 @@ replace_columns = {"abandonapplication":"Other ways to apply",
        "weeklyvisits":"Visits",
        "weeklyuniquevisits":"Unique visitors",
        "weeklypageviews": "Pageviews",
-       "averagetimeonpage":"Average time on page"}
+       "averagetimeonpage":"Average time on page",
+       "usersatisfaction":"User satisfaction",
+       "successrate":"Success rate"}
 
 
 
@@ -116,7 +143,9 @@ df = df[['date',
 		'Visits',
 		'Unique visitors',
 		'Pageviews',
-		'Average time on page']]
+		'Average time on page',
+		'User satisfaction',
+		'Success rate']]
 
 df = pd.melt(df, id_vars=['date'], var_name='variable')
 
@@ -137,6 +166,10 @@ channeldf = df[df['module'] == 'Enquiries about the onine application form']
 channeldf = channeldf[['date','variable','value']]
 rejecteddf = df[df['module'] == 'Reasons for rejected online applications']
 rejecteddf = rejecteddf[['date','variable','value']]
+successratedf = df[df['module'] == 'Success rate']
+successratedf = successratedf[['date','variable','value']]
+customersatdf = df[df['module'] == 'User satisfaction']
+customersatdf = customersatdf[['date','variable','value']]
 
 dfvisits.to_csv('static/data/local_visits.csv',index=False,encoding='utf8')
 
@@ -144,6 +177,8 @@ servicesdf.to_csv('static/data/bucks/services.csv', index=False,encoding='utf8')
 abandondf.to_csv('static/data/bucks/abandon.csv',index=False,encoding='utf8')
 channeldf.to_csv('static/data/bucks/channel.csv', index=False,encoding='utf8')
 rejecteddf.to_csv('static/data/bucks/rejected.csv', index=False,encoding='utf8')
+successratedf.to_csv('static/data/bucks/successrate.csv', index=False,encoding='utf8')
+customersatdf.to_csv('static/data/bucks/customersat.csv', index=False,encoding='utf8')
 
 df1  = df.pivot_table(values='variable',index=['date','value'],columns='module',aggfunc='first')
 df1.reset_index(inplace=True)
@@ -164,6 +199,10 @@ metrics['Pageviews'] = 'Pageviews'
 metrics['Average time on page'] = 'Average time on page'
 metrics = metrics[-1:]
 metrics.to_csv('static/data/bucks/web_metrics.csv',index=False,encoding='utf8')
+
+avtop = metrics['average_time_on_pageN']
+avtop = avtop.reset_index()
+avtop = avtop['average_time_on_pageN'][0]
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0",port=5000,debug=True)
