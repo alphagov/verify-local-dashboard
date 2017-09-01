@@ -24,7 +24,8 @@ def get_pw(username):
         return users.get(username)
     return None
 
-@app.route('/buckinghamshire')
+@app.route('/')
+# @app.route('/buckinghamshire')
 @auth.login_required
 def index():
         # return render_template('series_local.html')
