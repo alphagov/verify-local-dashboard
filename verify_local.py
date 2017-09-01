@@ -77,16 +77,11 @@ for data in jsondata['feed']['entry']:
 	
 	datajson['date'] = jsondata['feed']['entry'][i]['title']['$t']
 	
-	# data_df['date'] = jsondata['feed']['entry'][i]['title']['$t']
-	
-	# df = df.append(data_df)
-	# print(i)
 
 	i = i+1
 	dictlist.append(datajson)
 
 df = pd.DataFrame.from_dict(dictlist)
-print(df.head())
 
 replace_columns = {"abandonapplication":"Other ways to apply",
        "numberofpicturedoesnotmeetstandards":"Picture does not meet standards",
@@ -157,8 +152,6 @@ dfuvisits = df[df['module']=='Unique visits']
 dfpvs =df[df['module']=='Pageviews']
 favgtime = df[df['module']=='Average time on page']
 
-
-
 servicesdf = df[df['module']=='Completed applications per channel']
 servicesdf = servicesdf[['date','variable','value']]
 abandondf = df[df['module'] == 'New applications started with GOV.UK verify, legacy route and \'other ways to apply\'']
@@ -207,5 +200,4 @@ avtop = avtop['average_time_on_pageN'][0]
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0",port=5000,debug=True)
-
 
