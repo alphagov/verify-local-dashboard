@@ -8,6 +8,7 @@ from io import StringIO
 from flask.ext.wtf import form
 from flask_wtf.csrf import CsrfProtect
 from flask_httpauth import HTTPBasicAuth
+import os
 
 app = Flask(__name__)
 app.secret_key = 'GTF_CSRF_hackers!'
