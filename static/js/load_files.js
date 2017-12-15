@@ -1,4 +1,4 @@
-services =  d3.csv("static/data/services.csv", function(error, data) {
+services =  d3.csv("static/data/bucks/services.csv", function(error, data) {
                     console.log(data);
 
                     var dateFormat = d3.time.format("%Y-%m-%d");
@@ -10,7 +10,7 @@ services =  d3.csv("static/data/services.csv", function(error, data) {
                     makeGraphs(error, data);
             });   
 
-abandon =  d3.csv("static/data/abandon.csv", function(error, data) {
+abandon =  d3.csv("static/data/bucks/abandon.csv", function(error, data) {
                     console.log(data);
 
                     var dateFormat = d3.time.format("%Y-%m-%d");
@@ -22,7 +22,7 @@ abandon =  d3.csv("static/data/abandon.csv", function(error, data) {
                     abandonGraphs(error, data);
             });   
 
-channel =  d3.csv("static/data/channel.csv", function(error, data) {
+channel =  d3.csv("static/data/bucks/channel.csv", function(error, data) {
                     console.log(data);
 
                     var dateFormat = d3.time.format("%Y-%m-%d");
@@ -34,7 +34,7 @@ channel =  d3.csv("static/data/channel.csv", function(error, data) {
                     channelGraphs(error, data);
             });  
 
-rejected = d3.csv("static/data/rejected.csv", function(error, data) {
+rejected = d3.csv("static/data/bucks/rejected.csv", function(error, data) {
                     console.log(data);
 
                     var dateFormat = d3.time.format("%Y-%m-%d");
@@ -46,7 +46,7 @@ rejected = d3.csv("static/data/rejected.csv", function(error, data) {
                     rejectedGraphs(error, data);
             });  
 
-web_metrics = d3.csv("static/data/web_metrics.csv", function(error, data) {
+web_metrics = d3.csv("static/data/bucks/web_metrics.csv", function(error, data) {
                     console.log(data);
 
                     var dateFormat = d3.time.format("%Y-%m-%d");

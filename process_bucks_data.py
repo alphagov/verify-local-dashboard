@@ -1,73 +1,18 @@
 import requests
 import json
-from flask import Flask
-from flask import request, url_for, redirect, render_template, jsonify
 import pandas as pd
 import sys
 from io import StringIO
-from flask.ext.wtf import form
-from flask_wtf.csrf import CsrfProtect
-from flask_httpauth import HTTPBasicAuth
 import os
-from flask_apscheduler import APScheduler
+import time
 
-class Config(object):
-    JOBS = [
-        {
-            'id': 'get_json',
-            'func': 'verify_local:get_json',
-            'args': (),
-            'trigger': 'interval',
-            'seconds': 10
-        }
-    ]
-
-    SCHEDULER_API_ENABLED = True
-
-
-app = Flask(__name__)
-
-# users = {
-#     "buckinghamshire": "bucksdataviz"
-# }
-
-# @auth.get_password
-# def get_pw(username):
-#     if username in users:
-#         return users.get(username)
-#     return None
-
-# @app.route('/')
-@app.route('/argleton')
-# @auth.login_required
-
-
-
-
-def index():	
-    return render_template('buckinghamshire.html',
-                    avtop=avtop)
-        # return render_template('buckinghamshire.html')
-        
-        # return render_template('local_all_dims.html')
-   
-def get_json():
-	sheets = requests.get('https://spreadsheets.google.com/feeds/list/13RVOMzKocVQFW0I00uOHBM6LULGiMb_vfJwzlbyxtMA/1/public/basic?alt=json')
+j = 0
+def get_cc_json(jsonstr):
+	sheets = requests.get(jsonstr)
 	jsondata = json.loads(sheets.text)
 
 	datastr = jsondata['feed']['entry'][0]['content']['$t']
 	datestr = jsondata['feed']['entry'][0]['title']['$t']
-
-	with open('verifylocal_modules.json') as md:
-		modules = json.load(md)
-
-	modules_keys = list(modules.keys())
-
-	def get_modules(mod):
-		for k in modules_keys:
-			if mod in modules[k]:
-				return k
-				break
 
 	def format_str(dstr):
 
@@ -93,8 +38,16 @@ def get_json():
 
 		i = i+1
 		dictlist.append(datajson)
+		return dictlist
 
-	df = pd.DataFrame.from_dict(dictlist)
+while True:
+	print(j)
+	time.sleep(.9)
+
+
+
+
+	df = pd.DataFrame.from_dict(get_cc_json('https://spreadsheets.google.com/feeds/list/13RVOMzKocVQFW0I00uOHBM6LULGiMb_vfJwzlbyxtMA/1/public/basic?alt=json'))
 
 	replace_columns = {"abandonapplication":"Other ways to apply",
 	       "numberofpicturedoesnotmeetstandardsctonly":"Picture does not meet standards",
@@ -105,7 +58,6 @@ def get_json():
 	       "onlinelegacyroute":"Online legacy route",
 	       "post":"Post", 
 	       "phone":"Telephone", 
-	       "usesverify":"Uses Verify",
 	       "erroronform":"Error on form", 
 	       "illegible":"Illegible",
 	       "incomplete":"Incomplete", 
@@ -160,8 +112,19 @@ def get_json():
 
 	df = pd.melt(df, id_vars=['date'], var_name='variable')
 
+	with open('verifylocal_modules.json') as md:
+		modules = json.load(md)
+
+	modules_keys = list(modules.keys())
+
+	def get_modules(mod):
+		for k in modules_keys:
+			if mod in modules[k]:
+				return k
+				break
+
 	df['module'] = df.apply(lambda row: get_modules(row['variable']),axis=1)
-	# df.to_csv('local_modules_inDF.csv')
+	df.to_csv('local_modules_inDF.csv')
 	dfvisits = df[df['module']=='Visits']
 	dfuvisits = df[df['module']=='Unique visits']
 	dfpvs =df[df['module']=='Pageviews']
@@ -180,7 +143,7 @@ def get_json():
 	customersatdf = df[df['module'] == 'User satisfaction']
 	customersatdf = customersatdf[['date','variable','value']]
 
-	dfvisits.to_csv('static/data/local_visits.csv',index=False,encoding='utf8')
+	# dfvisits.to_csv('static/data/local_visits.csv',index=False,encoding='utf8')
 
 	servicesdf.to_csv('static/data/bucks/services.csv', index=False,encoding='utf8')
 	abandondf.to_csv('static/data/bucks/abandon.csv',index=False,encoding='utf8')
@@ -192,7 +155,7 @@ def get_json():
 	df1 = df.pivot_table(values='variable',index=['date','value'],columns='module',aggfunc='first')
 	df1.reset_index(inplace=True)
 	df1.fillna(0,inplace=True )
-	# df1.to_json('static/data/bucks/local_data.json')
+	
 	df1.to_csv('static/data/bucks/local_data.csv',index=False,encoding='utf8')
 
 	metrics = df[(df['module']=='Visits')|(df['module']=='Unique Visitors')|(df['module']=='Pageviews')|(df['module']=='Average time on page')]
@@ -211,23 +174,9 @@ def get_json():
 
 	avtop = metrics['average_time_on_pageN']
 	avtop = avtop.reset_index()
-	# avtop = avtop['average_time_on_pageN'][0]
-	avtop = avtop.to_csv('static/data/bucks/average_time_on_page.csv')
+	avtop = avtop['average_time_on_pageN'][0]
 
-avtopdf = pd.read_csv('static/data/bucks/average_time_on_page.csv')
-avtop = avtopdf['average_time_on_pageN'][0]
-
-port = os.getenv('PORT', '5050')
-if __name__ == "__main__":
 	
-	app.config.from_object(Config())
-
-	scheduler = APScheduler()
-	# it is also possible to enable the API directly
-	# scheduler.api_enabled = True
-	scheduler.init_app(app)
-	scheduler.start()
-	app.run(host="0.0.0.0",port=int(port),debug=True)
 
 
-
+	j = j+1

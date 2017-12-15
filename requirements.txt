@@ -2,6 +2,7 @@ aenum==1.4.5
 alembic==0.7.0
 aniso8601==0.92
 appnope==0.1.0
+APScheduler==3.3.1
 attrs==16.0.0
 backports.ssl-match-hostname==3.4.0.2
 beautifulsoup4==4.3.2
@@ -14,6 +15,7 @@ docopt==0.6.2
 entrypoints==0.2.2
 feedparser==5.2.1
 Flask==0.10.1
+Flask-APScheduler==1.7.0
 Flask-HTTPAuth==3.2.2
 Flask-WTF==0.14.2
 gitsome==0.6.0
@@ -43,6 +45,8 @@ nbformat==4.2.0
 notebook==4.4.1
 numpy==1.11.2
 numpydoc==0.6.0
+oauth==1.0.1
+oauth2==1.9.0.post1
 oauth2client==4.0.0
 pandas==0.20.1
 pandocfilters==1.4.1
@@ -71,6 +75,7 @@ terminado==0.6
 testpath==0.3
 tornado==4.4.2
 traitlets==4.3.1
+tzlocal==1.4
 uritemplate==3.0.0
 uritemplate.py==0.3.0
 virtualenv==15.1.0

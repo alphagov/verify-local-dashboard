@@ -1,0 +1,121 @@
+,date,variable,value,module
+0,2017-08-28,Post,35,Completed applications per channel
+1,2017-08-21,Post,43,Completed applications per channel
+2,2017-08-14,Post,32,Completed applications per channel
+3,2017-08-07,Post,53,Completed applications per channel
+4,2017-07-31,Post,64,Completed applications per channel
+5,2017-08-28,Face to face,45,Completed applications per channel
+6,2017-08-21,Face to face,23,Completed applications per channel
+7,2017-08-14,Face to face,23,Completed applications per channel
+8,2017-08-07,Face to face,43,Completed applications per channel
+9,2017-07-31,Face to face,62,Completed applications per channel
+10,2017-08-28,Online GOV.UK Verify,64,Completed applications per channel
+11,2017-08-21,Online GOV.UK Verify,43,Completed applications per channel
+12,2017-08-14,Online GOV.UK Verify,34,Completed applications per channel
+13,2017-08-07,Online GOV.UK Verify,21,Completed applications per channel
+14,2017-07-31,Online GOV.UK Verify,53,Completed applications per channel
+15,2017-08-28,Online legacy route,54,Completed applications per channel
+16,2017-08-21,Online legacy route,21,Completed applications per channel
+17,2017-08-14,Online legacy route,54,Completed applications per channel
+18,2017-08-07,Online legacy route,32,Completed applications per channel
+19,2017-07-31,Online legacy route,45,Completed applications per channel
+20,2017-08-28,Telephone,44,Completed applications per channel
+21,2017-08-21,Telephone,32,Completed applications per channel
+22,2017-08-14,Telephone,23,Completed applications per channel
+23,2017-08-07,Telephone,45,Completed applications per channel
+24,2017-07-31,Telephone,45,Completed applications per channel
+25,2017-08-28,Legacy route,54,"New applications started with GOV.UK verify, legacy route and 'other ways to apply'"
+26,2017-08-21,Legacy route,43,"New applications started with GOV.UK verify, legacy route and 'other ways to apply'"
+27,2017-08-14,Legacy route,34,"New applications started with GOV.UK verify, legacy route and 'other ways to apply'"
+28,2017-08-07,Legacy route,34,"New applications started with GOV.UK verify, legacy route and 'other ways to apply'"
+29,2017-07-31,Legacy route,43,"New applications started with GOV.UK verify, legacy route and 'other ways to apply'"
+30,2017-08-28,Use GOV.UK Verify,43,"New applications started with GOV.UK verify, legacy route and 'other ways to apply'"
+31,2017-08-21,Use GOV.UK Verify,32,"New applications started with GOV.UK verify, legacy route and 'other ways to apply'"
+32,2017-08-14,Use GOV.UK Verify,54,"New applications started with GOV.UK verify, legacy route and 'other ways to apply'"
+33,2017-08-07,Use GOV.UK Verify,42,"New applications started with GOV.UK verify, legacy route and 'other ways to apply'"
+34,2017-07-31,Use GOV.UK Verify,32,"New applications started with GOV.UK verify, legacy route and 'other ways to apply'"
+35,2017-08-28,Other ways to apply,34,"New applications started with GOV.UK verify, legacy route and 'other ways to apply'"
+36,2017-08-21,Other ways to apply,23,"New applications started with GOV.UK verify, legacy route and 'other ways to apply'"
+37,2017-08-14,Other ways to apply,43,"New applications started with GOV.UK verify, legacy route and 'other ways to apply'"
+38,2017-08-07,Other ways to apply,24,"New applications started with GOV.UK verify, legacy route and 'other ways to apply'"
+39,2017-07-31,Other ways to apply,35,"New applications started with GOV.UK verify, legacy route and 'other ways to apply'"
+40,2017-08-28,Application process,53,Enquiries about the onine application form
+41,2017-08-21,Application process,54,Enquiries about the onine application form
+42,2017-08-14,Application process,53,Enquiries about the onine application form
+43,2017-08-07,Application process,43,Enquiries about the onine application form
+44,2017-07-31,Application process,34,Enquiries about the onine application form
+45,2017-08-28,Eligibility,45,Enquiries about the onine application form
+46,2017-08-21,Eligibility,25,Enquiries about the onine application form
+47,2017-08-14,Eligibility,36,Enquiries about the onine application form
+48,2017-08-07,Eligibility,42,Enquiries about the onine application form
+49,2017-07-31,Eligibility,532,Enquiries about the onine application form
+50,2017-08-28,Application outcome,34,Enquiries about the onine application form
+51,2017-08-21,Application outcome,43,Enquiries about the onine application form
+52,2017-08-14,Application outcome,54,Enquiries about the onine application form
+53,2017-08-07,Application outcome,23,Enquiries about the onine application form
+54,2017-07-31,Application outcome,34,Enquiries about the onine application form
+55,2017-08-28,GOV.UK Verify,35,Enquiries about the onine application form
+56,2017-08-21,GOV.UK Verify,45,Enquiries about the onine application form
+57,2017-08-14,GOV.UK Verify,21,Enquiries about the onine application form
+58,2017-08-07,GOV.UK Verify,23,Enquiries about the onine application form
+59,2017-07-31,GOV.UK Verify,335,Enquiries about the onine application form
+60,2017-08-28,Certified companies,43,Enquiries about the onine application form
+61,2017-08-21,Certified companies,65,Enquiries about the onine application form
+62,2017-08-14,Certified companies,34,Enquiries about the onine application form
+63,2017-08-07,Certified companies,24,Enquiries about the onine application form
+64,2017-07-31,Certified companies,54,Enquiries about the onine application form
+65,2017-08-28,Incomplete,54,Reasons for rejected online applications
+66,2017-08-21,Incomplete,35,Reasons for rejected online applications
+67,2017-08-14,Incomplete,56,Reasons for rejected online applications
+68,2017-08-07,Incomplete,35,Reasons for rejected online applications
+69,2017-07-31,Incomplete,43,Reasons for rejected online applications
+70,2017-08-28,Illegible,54,Reasons for rejected online applications
+71,2017-08-21,Illegible,54,Reasons for rejected online applications
+72,2017-08-14,Illegible,65,Reasons for rejected online applications
+73,2017-08-07,Illegible,54,Reasons for rejected online applications
+74,2017-07-31,Illegible,34,Reasons for rejected online applications
+75,2017-08-28,Error on form,34,Reasons for rejected online applications
+76,2017-08-21,Error on form,23,Reasons for rejected online applications
+77,2017-08-14,Error on form,34,Reasons for rejected online applications
+78,2017-08-07,Error on form,45,Reasons for rejected online applications
+79,2017-07-31,Error on form,43,Reasons for rejected online applications
+80,2017-08-28,Picture does not meet standards,54,Reasons for rejected online applications
+81,2017-08-21,Picture does not meet standards,24,Reasons for rejected online applications
+82,2017-08-14,Picture does not meet standards,65,Reasons for rejected online applications
+83,2017-08-07,Picture does not meet standards,34,Reasons for rejected online applications
+84,2017-07-31,Picture does not meet standards,35,Reasons for rejected online applications
+85,2017-08-28,Incorrect payment,35,Reasons for rejected online applications
+86,2017-08-21,Incorrect payment,43,Reasons for rejected online applications
+87,2017-08-14,Incorrect payment,45,Reasons for rejected online applications
+88,2017-08-07,Incorrect payment,43,Reasons for rejected online applications
+89,2017-07-31,Incorrect payment,543,Reasons for rejected online applications
+90,2017-08-28,Weekly visits,5443,Visits
+91,2017-08-21,Weekly visits,543,Visits
+92,2017-08-14,Weekly visits,3445,Visits
+93,2017-08-07,Weekly visits,6543,Visits
+94,2017-07-31,Weekly visits,5443,Visits
+95,2017-08-28,Unique visitors,5422,Unique Visitors
+96,2017-08-21,Unique visitors,540,Unique Visitors
+97,2017-08-14,Unique visitors,3344,Unique Visitors
+98,2017-08-07,Unique visitors,6542,Unique Visitors
+99,2017-07-31,Unique visitors,5442,Unique Visitors
+100,2017-08-28,Pageviews,10000,Pageviews
+101,2017-08-21,Pageviews,1000,Pageviews
+102,2017-08-14,Pageviews,43212,Pageviews
+103,2017-08-07,Pageviews,6543,Pageviews
+104,2017-07-31,Pageviews,6554,Pageviews
+105,2017-08-28,Average time on page,01:23,Average time on page
+106,2017-08-21,Average time on page,01:32,Average time on page
+107,2017-08-14,Average time on page,01:32,Average time on page
+108,2017-08-07,Average time on page,01:43,Average time on page
+109,2017-07-31,Average time on page,01:32,Average time on page
+110,2017-08-28,User satisfaction,87,User satisfaction
+111,2017-08-21,User satisfaction,43,User satisfaction
+112,2017-08-14,User satisfaction,87,User satisfaction
+113,2017-08-07,User satisfaction,87,User satisfaction
+114,2017-07-31,User satisfaction,54,User satisfaction
+115,2017-08-28,Users started Verify,56,Number of users starting GOV.UK Verify journey
+116,2017-08-21,Users started Verify,54,Number of users starting GOV.UK Verify journey
+117,2017-08-14,Users started Verify,56,Number of users starting GOV.UK Verify journey
+118,2017-08-07,Users started Verify,65,Number of users starting GOV.UK Verify journey
+119,2017-07-31,Users started Verify,53,Number of users starting GOV.UK Verify journey
