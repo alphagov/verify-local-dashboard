@@ -1,19 +1,16 @@
 date,variable,value
-2017-08-21,Legacy route,223
-2017-08-14,Legacy route,223
-2017-08-07,Legacy route,223
-2017-07-31,Legacy route,223
-2017-07-24,Legacy route,223
-2017-07-17,Legacy route,223
-2017-08-21,Use GOV.UK Verify,433
-2017-08-14,Use GOV.UK Verify,433
-2017-08-07,Use GOV.UK Verify,433
-2017-07-31,Use GOV.UK Verify,433
-2017-07-24,Use GOV.UK Verify,433
-2017-07-17,Use GOV.UK Verify,433
-2017-08-21,Other ways to apply,22
-2017-08-14,Other ways to apply,22
-2017-08-07,Other ways to apply,22
-2017-07-31,Other ways to apply,22
-2017-07-24,Other ways to apply,22
-2017-07-17,Other ways to apply,22
+2017-08-28,Legacy route,54
+2017-08-21,Legacy route,43
+2017-08-14,Legacy route,34
+2017-08-07,Legacy route,34
+2017-07-31,Legacy route,43
+2017-08-28,Use GOV.UK Verify,43
+2017-08-21,Use GOV.UK Verify,32
+2017-08-14,Use GOV.UK Verify,54
+2017-08-07,Use GOV.UK Verify,42
+2017-07-31,Use GOV.UK Verify,32
+2017-08-28,Other ways to apply,34
+2017-08-21,Other ways to apply,23
+2017-08-14,Other ways to apply,43
+2017-08-07,Other ways to apply,24
+2017-07-31,Other ways to apply,35

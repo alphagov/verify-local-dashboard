@@ -2,13 +2,14 @@
 	"Completed applications per channel": ["Post", "Face to face", "Online GOV.UK Verify", "Online legacy route", "Telephone"],
 	"Number of user enquiries": "Total contact",
 	"New applications started with GOV.UK verify, legacy route and 'other ways to apply'": ["Legacy route", "Use GOV.UK Verify", "Other ways to apply"],
-	"Enquiries about the onine application form":["Application process","Eligibility","Application outcome","GOV.UK Verify","Certified companies"],
-	"Reasons for rejected online applications": ["Incomplete", "Illegible", "Error of form", "Not elegible", "Picture does not meet standards", "Incorrect payments"],
-	"Visits": "Visits",
+	"Enquiries about the onine application form":["Application process","Eligibility","Application outcome","GOV.UK Verify","Certified companies","Other enquiry"],
+	"Reasons for rejected online applications": ["Incomplete", "Illegible", "Error on form", "Not elegible", "Picture does not meet standards", "Incorrect payment"],
+	"Visits": "Weekly visits",
+	"Uses Verify": "Uses Verify",
 	"Unique Visitors": "Unique visitors",
 	"Pageviews": "Pageviews",
 	"Average time on page": "Average time on page",
-	"Success rate": "Success rate",
-	"User satisfaction": "User satisfaction"
-
+	"Visits with successful verification or sign-in": "Visits",
+	"User satisfaction": "User satisfaction",
+	"Number of users starting GOV.UK Verify journey":"Users started Verify"
 }

@@ -1,31 +1,26 @@
 date,variable,value
-2017-08-21,Application process,432
-2017-08-14,Application process,432
-2017-08-07,Application process,432
-2017-07-31,Application process,432
-2017-07-24,Application process,432
-2017-07-17,Application process,432
-2017-08-21,Eligibility,213
-2017-08-14,Eligibility,213
-2017-08-07,Eligibility,213
-2017-07-31,Eligibility,213
-2017-07-24,Eligibility,213
-2017-07-17,Eligibility,213
-2017-08-21,Application outcome,213
-2017-08-14,Application outcome,213
-2017-08-07,Application outcome,213
-2017-07-31,Application outcome,213
-2017-07-24,Application outcome,213
-2017-07-17,Application outcome,213
-2017-08-21,GOV.UK Verify,432
-2017-08-14,GOV.UK Verify,432
-2017-08-07,GOV.UK Verify,432
-2017-07-31,GOV.UK Verify,432
-2017-07-24,GOV.UK Verify,432
-2017-07-17,GOV.UK Verify,432
-2017-08-21,Certified companies,321
-2017-08-14,Certified companies,321
-2017-08-07,Certified companies,321
-2017-07-31,Certified companies,321
-2017-07-24,Certified companies,321
-2017-07-17,Certified companies,321
+2017-08-28,Application process,53
+2017-08-21,Application process,54
+2017-08-14,Application process,53
+2017-08-07,Application process,43
+2017-07-31,Application process,34
+2017-08-28,Eligibility,45
+2017-08-21,Eligibility,25
+2017-08-14,Eligibility,36
+2017-08-07,Eligibility,42
+2017-07-31,Eligibility,532
+2017-08-28,Application outcome,34
+2017-08-21,Application outcome,43
+2017-08-14,Application outcome,54
+2017-08-07,Application outcome,23
+2017-07-31,Application outcome,34
+2017-08-28,GOV.UK Verify,35
+2017-08-21,GOV.UK Verify,45
+2017-08-14,GOV.UK Verify,21
+2017-08-07,GOV.UK Verify,23
+2017-07-31,GOV.UK Verify,335
+2017-08-28,Certified companies,43
+2017-08-21,Certified companies,65
+2017-08-14,Certified companies,34
+2017-08-07,Certified companies,24
+2017-07-31,Certified companies,54
